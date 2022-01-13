@@ -1,0 +1,234 @@
+﻿/*head*/
+.headercss {
+    grid-area: header;
+    border-top: 3px outset #092436;
+    border-bottom: 5px outset #1C6EA4;
+}
+.headerlinks {
+    text-decoration: none;
+    margin: 5px;
+    color: orange;
+    font-family: 'Agency FB';
+}
+.logo {
+    width: 75px;
+    height: 75px;
+    float: left;
+}
+
+/*body*/
+p.summary {
+    border: hidden;
+    width: 50%;
+    height: auto;
+    color: orange;
+    font-family: "Agency FB";
+}
+.links {
+    outline-offset: 5px;
+    flex: 1 1 33%;
+    list-style: none;
+    justify-content: space-between;
+    padding: 3px;
+    border: 20px inset #092436;
+    border-radius: 20px;
+    background-color: #000000;
+    width: 50%;
+    text-decoration: none;
+    float:right;
+    text-align:right;
+    color:orange;
+    font-family:'Agency FB';
+}
+.bottomlink {
+    outline-offset: 5px;
+    flex: 1 1 33%;
+    list-style: none;
+    justify-content: space-between;
+    padding: 3px;
+    border: 20px inset #092436;
+    border-radius: 20px;
+    background-color: #000000;
+    width: 50%;
+    text-decoration: none;
+    float: right;
+    text-align: right;
+    color: orange;
+    font-family: 'Agency FB';
+    margin: 0px 0px 50px 0px;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    
+}
+
+.text-right {
+    text-align: right;
+    float: right;
+    /*width: 50%;*/
+    color: orange;
+    font-family: 'Agency FB';
+    text-decoration:none;
+    padding: 10px;
+}
+
+.text-left {
+    text-align: left;
+    float: left;
+    /*width: 50%;*/
+    font-family: 'Agency FB';
+    color: orange;
+    text-decoration: none;
+    padding: 10px;
+}
+.text-center {
+    text-align: center;
+    display:flex;
+    margin:auto;    
+    color:orange;
+    font-family:'Agency FB';
+    text-decoration:none;
+    padding: 10px;
+}
+.indexlinks {
+    text-align: center;
+    margin: auto;
+    color: orange;
+    font-family: 'Agency FB';
+    text-decoration: none;
+    border: solid;
+    padding: 10px;
+    
+}
+.backgroundimg {
+    box-sizing: border-box;
+    filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+body{
+    grid-area:body;
+}
+.bodybold{
+    font:bold;
+    color:orange;
+    font-family:'Agency FB';
+}
+/*footer*/
+.footersubheader {
+    font-size: 24px;
+    height: 25px;
+    text-align: center;
+    color:orange;
+    font-family:'Agency FB';
+}
+.footercss {
+    display: flex;
+    border-top: 3px outset #092436;
+    grid-area: footer;
+    padding: 100px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
+    color: orange;
+    border-bottom: 5px outset #092436;
+}
+.imgsize{
+    width: 25px;
+    height: 25px;
+    float: right;
+}
+.footerlink{
+    height:auto;
+    width:auto;
+}
+
+/*Accordion*/
+.ac-container {
+    max-width: auto;
+    float:left;
+    
+}
+
+    .ac-container label {
+        height: 30px !important;
+        line-height: 21px !important;
+        font-size: 12px !important;
+        font-family: 'Agency FB';
+        padding: 5px 20px;
+        position: relative;
+        z-index: 20;
+        display: block;
+        height: 30px;
+        cursor: pointer;
+        color: #f1f2f3;
+        line-height: 33px;
+        font-size: 19px;
+        background: #000000;
+        font-size: 12px;
+        height: 30px;
+        line-height: 20px;
+        
+    }
+
+.ac-container {
+    width: 100%;
+    margin: 10px auto 30px auto;
+}
+
+    .ac-container label:hover {
+        background: #092436;
+    }
+
+    .ac-container input:checked + label, .ac-container input:checked + label:hover {
+        background: #f1f2f3;
+        color: orange;
+        height: 30px;
+        line-height: 21px;
+        font-size: 13px;
+    }
+
+        .ac-container label:hover:after, .ac-container input:checked + label:hover:after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: 13px;
+            top: 7px;
+        }
+    .ac-container input {
+        display: none;
+    }
+
+    .ac-container article {
+        background: #000000;
+        margin-top: -1px;
+        overflow: hidden;
+        height: 0;
+        position: relative;
+        z-index: 10;
+        transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+    }
+
+        .ac-container article p {
+            line-height: 23px;
+            font-size: 10px;
+            padding: 20px;
+            font-family: 'Agency FB';
+            color: orange;
+        }
+
+
+        .ac-container input:checked ~ article.ac-small {
+            height: auto;
+        }
